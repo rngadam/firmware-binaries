@@ -1,1 +1,1 @@
-noinitrd mem=128M console=ttyS0,115200 root=/dev/mmcblk0p2 rootfstype=ext4 rw rootwait
+mem=128M ip=dhcp noinitrd init=/sbin/init root=/dev/nfs nfsroot=10.42.0.1:/home/rngadam/lophilo.nfs rw nfsrootdebug rootwait rootfstype=nfs
