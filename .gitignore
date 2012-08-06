@@ -1,1 +1,8 @@
 *.zip
+# generated files
+kernel.txt
+vmlinux
+vmlinux-debug
+zImage
+zImage-debug
+
