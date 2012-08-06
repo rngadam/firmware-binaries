@@ -1,0 +1,6 @@
+NFSROOT=`cat nfsroot-ip`
+kexec -l /boot/zImage-debug --append="mem=128M ip=dhcp noinitrd init=/sbin/init root=/dev/nfs nfsroot=$NFSROOT:/home/rngadam/lophilo-OS.nfs rw nfsrootdebug rootwait rootfstype=nfs kgdboc=ttyS2,115200"
+kexec -e
+#[Alt][SysRq][g]
+# on the host:
+# gdb ~/lophilo/obj/linux-debug/arch/arm/boot/compressed/vmlinux
