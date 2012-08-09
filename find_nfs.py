@@ -2,6 +2,22 @@
 # Based on:
 # http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html
 # http://avahi.org/wiki/PythonBrowseExample
+#
+# client:  apt-get install python-avahi python-gobject-2 python-dbus
+#
+# server: /etc/avahi/services/nfs.service
+#
+# <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+# <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+#
+# <!-- This file is part of udisks -->
+# <service-group>
+#   <name replace-wildcards="yes">Lophilo OS on %h</name>
+#   <service>
+#     <type>_nfs._tcp</type>
+#     <txt-record>path=/home/rngadam/lophilo.nfs</txt-record>
+#   </service>
+# </service-group>
 
 import dbus, gobject, avahi
 from dbus import DBusException
