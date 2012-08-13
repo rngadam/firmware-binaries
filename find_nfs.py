@@ -49,7 +49,7 @@ def myhandler(interface, protocol, name, stype, domain, flags):
             pass
 
     server.ResolveService(interface, protocol, name, stype, 
-        domain, avahi.PROTO_UNSPEC, dbus.UInt32(0), 
+        domain, avahi.PROTO_INET, dbus.UInt32(0), 
         reply_handler=service_resolved, error_handler=print_error)
 
 
